@@ -17,31 +17,6 @@ function setup() {
 
 function draw() {
   background("lightgray");  
-  /*if((bullet.x - wall.x < bullet.width/2 + wall.width/2) && (wall.x - bullet.x < wall.width/2 + bullet.width/2) && (bullet.y - wall.y < bullet.height/2 + wall.height/2) && (wall.y - bullet.y < wall.height/2 + bullet.height/2)){
-  bullet.velocityX = 0;
-  var damage = (0.5 * weight * speed * speed) / (thickness * thickness * thickness);
-		if(damage > 10){
-			wall.shapeColor = "red";
-			textSize(30);
-			fill("red");
-			text("Wall was Ineffective, Press R to Rerun Simulation", 500, 100);
-    }
-    if(damage <= 10){
-      wall.shapeColor = "green";
-			textSize(30);
-			fill("green");
-			text("Wall was Effective, Press R to Rerun Simulation", 500, 100);
-    }   
-		
-  if(keyDown("r")){
-	wall.x = 70;
-	thickness = random(22,83);
-    speed = random(223,321);
-    weight = random(30,52);
-	bullet.velocityX = speed;
-	wall.shapeColor = "gray";
-    }
-  }*/
   if(hasCollided(bullet, wall)){
     bullet.velocityX = 0;
   var damage = (0.5 * weight * speed * speed) / (thickness * thickness * thickness);
